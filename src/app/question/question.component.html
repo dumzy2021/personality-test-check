@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="card">
+    <ng-container *ngIf="!isTestCompleted">
+      <div class="d-flex justify-content-between p-3">
+        <div class="questions-remaining">
+          <h6>
+            Question {{ currentQuestion + 1 }} of {{ questionList.length }}
+          </h6>
+        </div>
+        <div class="timer">
+          <h6>{{ counter }} secs <i class="fas fa-clock"></i></h6>
+        </div>
+      </div>
+      <div class="question">
+        <div class="card">
+          <h5>{{ questionList[currentQuestion]?.questionText }}</h5>
+        </div>
+      </div>
+      <div class="options">
+        <ol *ngFor="let option of questionList[currentQuestion]?.options">
+          <li (click)="selectedAnswer(option)">
+            <div appChangeBg class="card">{{ option.text }}</div>
+          </li>
+        </ol>
+      </div>
+      <div class="button-box text-center">
+        <button class="btn btn-dark px-4" (click)="nextQuestion()">
+          Next
+          <i class="ms-2 fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isTestCompleted">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="assets/congrats.jpg" alt="Congratulations" width="300" />
+          <h5 class="text-center my-3">
+            Congratulations!!<br />
+            you have completed the personality test.<br />
+            Below is your result
+          </h5>
+          <p>
+            Total Questions Attempted : {{ attemptedQuestions }} /
+            {{ questionList.length }}
+          </p>
+          <p>Total Questions Correct : {{ correctAnswers }}</p>
+          <div class="button-box text-center">
+            <button class="btn btn-dark px-4" (click)="resetTest()">
+              Reset Test
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
