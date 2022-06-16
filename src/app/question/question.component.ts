@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { IQuestion } from '../models';
 import { QuestionService } from '../services/question.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { QuestionService } from '../services/question.service';
 export class QuestionComponent implements OnInit {
   isTestCompleted: boolean = false;
   done: boolean = false;
-  questionList: any = [];
+  questionList: IQuestion[] = [];
   currentQuestion: number = 0;
   counter: number = 60;
   anIntrovert: number = 0;
@@ -25,7 +26,7 @@ export class QuestionComponent implements OnInit {
   }
   getAllQuestions() {
     this.questionService.getQuestionJson().subscribe({
-      next: (value) => {
+      next: (value: { questions: IQuestion[] }) => {
         this.questionList = value.questions;
       },
     });
@@ -89,13 +90,5 @@ export class QuestionComponent implements OnInit {
     this.attemptedQuestions = 0;
     this.resetCounter();
     this.getAllQuestions();
-  }
-  checkTestStatus(): string {
-    if (this.anExtrovert == this.anIntrovert) {
-      return 'Undecided';
-    } else if (this.anExtrovert > this.anIntrovert) {
-      return 'an Extrovert';
-    }
-    return 'an Introvert';
   }
 }
