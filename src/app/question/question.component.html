@@ -32,26 +32,13 @@
       </div>
     </ng-container>
     <ng-container *ngIf="isTestCompleted">
-      <div class="row">
-        <div class="col-12 text-center">
-          <img src="assets/congrats.jpg" alt="Congratulations" width="300" />
-          <h6 class="text-center my-3">
-            Congratulations!!<br />
-            you have completed the personality test.<br />
-            Below is your result
-          </h6>
-          <p>
-            Total Questions Attempted : {{ attemptedQuestions }} /
-            {{ questionList.length }}
-          </p>
-          <p class="py-3">You are {{ checkTestStatus() }}</p>
-          <div class="button-box text-center">
-            <button class="btn btn-dark px-4" (click)="resetTest()">
-              Reset Test
-            </button>
-          </div>
-        </div>
-      </div>
+      <app-finish-screen
+        [introvertCount]="anIntrovert"
+        [extrovertCount]="anExtrovert"
+        [totalQuestions]="questionList.length"
+        [attemptedQuestions]="attemptedQuestions"
+        (onResetTest)="resetTest()"
+      ></app-finish-screen>
     </ng-container>
   </div>
 </div>

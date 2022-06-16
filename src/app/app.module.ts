@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HeadersComponent } from './headers/headers.component';
 import { QuestionComponent } from './question/question.component';
 import { ChangeBgDirective } from './directives/change-bg.directive';
+import { FinishScreenComponent } from './finish-screen/finish-screen.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ChangeBgDirective } from './directives/change-bg.directive';
     HeadersComponent,
     QuestionComponent,
     ChangeBgDirective,
+    FinishScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
