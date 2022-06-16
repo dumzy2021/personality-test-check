@@ -1,175 +1,174 @@
 {
   "questions": [
     {
-      "questionText": "Which of the following does TypeScript use to specify types?",
+      "questionText": "What would your friends describe you as?",
       "options": [
         {
-          "text": ":",
-          "correct": true
+          "text": "Outspoken",
+          "status": "e"
         },
         {
-          "text": ";"
+          "text": "Shy",
+          "status": "i"
         },
         {
-          "text": "!"
-        },
-        {
-          "text": "&"
+          "text": "Reserved",
+          "status": "i"
         }
-      ],
-      "explanation": "TS uses a colon (:) to separate the property name from the property type"
+      ]
     },
     {
-      "questionText": "Which of the following is NOT a type used in TypeScript?",
+      "questionText": "You arrive early to a kickback at your friends house and everyone one there are strangers. What would you do? ",
       "options": [
         {
-          "text": "number"
+          "text": "Make new friends and have the time of my life, DUH.",
+          "status": "e"
         },
         {
-          "text": "string"
+          "text": "Leave.",
+          "status": "i"
         },
         {
-          "text": "boolean"
-        },
-        {
-          "text": "enum",
-          "correct": true
+          "text": "Sit quietly in the corner and only speak when spoken to, while waiting for my friends to arrive.",
+          "status": "i"
         }
-      ],
-      "explanation": "enum is not used as a type in TypeScript"
+      ]
     },
     {
-      "questionText": "How can we specify properties and methods for an object in TypeScript?",
+      "questionText": "You’re out with friends in a public place and they’re acting wild. What do you do? ",
       "options": [
         {
-          "text": "Use classes."
+          "text": "Are you stupid? Act wild with them!",
+          "status": "e"
         },
         {
-          "text": "Use interfaces.",
-          "correct": true
+          "text": "Laugh and apologize for their behavior to random strangers.",
+          "status": "e"
         },
         {
-          "text": "Use enums."
-        },
-        {
-          "text": "Use async/await."
+          "text": "Walk across the street while holding you head down to avoid being seen.",
+          "status": "i"
         }
-      ],
-      "explanation": "interfaces are typically used to list the properties and methods for an object"
+      ]
     },
     {
-      "questionText": "How else can Array<number> be written in TypeScript?",
+      "questionText": "Your crush is working at your local grocery store! They’re working the only cash register open. What do you do? ",
       "options": [
         {
-          "text": "@number"
+          "text": "Flirt with them at the register then slide him your number.",
+          "status": "e"
         },
         {
-          "text": "number[]",
-          "correct": true
+          "text": "Attempt to make the transaction fast as possible and leave out the store in a hurry.",
+          "status": "i"
         },
         {
-          "text": "number!"
-        },
-        {
-          "text": "number?"
+          "text": "Leave the damn building.",
+          "status": "i"
         }
-      ],
-      "explanation": "number[] is another way of writing Array<number> in TypeScript"
+      ]
     },
     {
-      "questionText": "In which of these does a class take parameters?",
+      "questionText": "You’re at your families reunion and you have no idea who half these people are. What do you do?",
       "options": [
         {
-          "text": "constructor",
-          "correct": true
+          "text": "Burst through the door exclaiming “the party has arrived.",
+          "status": "e"
         },
         {
-          "text": "destructor"
+          "text": "Smile occasionally at them while making your way to your cousins room.",
+          "status": "i"
         },
         {
-          "text": "import"
-        },
-        {
-          "text": "subscribe"
+          "text": "Pull out your phone or book that you brought with you and hide in a corner.",
+          "status": "i"
         }
-      ],
-      "explanation": "a constructor is used by a class to take in parameters"
+      ]
     },
     {
-      "questionText": "Which is NOT an access modifier?",
+      "questionText": "All of your friends are planning to hang out but you simply don’t want to leave you bed. How do you handle this situation?",
       "options": [
         {
-          "text": "private"
+          "text": "Straight up tell them you don’t want to go.",
+          "status": "i"
         },
         {
-          "text": "protected"
+          "text": "Make an excuse telling them that you’re busy that day.",
+          "status": "i"
         },
         {
-          "text": "public"
-        },
-        {
-          "text": "async",
-          "correct": true
+          "text": "Agree to go out even tho you don’t really want to.",
+          "status": "e"
         }
-      ],
-      "explanation": "async is not used as an access modifier type in TypeScript"
+      ]
     },
     {
-      "questionText": "Which keyword allows us to share information between files in TypeScript?",
+      "questionText": "It’s finally  the weekend! What are your plans for the night?",
       "options": [
         {
-          "text": "import"
+          "text": "I’m going out with my friends! We about to PAR-TAY (party)!",
+          "status": "e"
         },
         {
-          "text": "export",
-          "correct": true
+          "text": "Invite a few friends over to watch a movie and maybe bake some goodies.",
+          "status": "e"
         },
         {
-          "text": "async"
-        },
-        {
-          "text": "constructor"
+          "text": "Scroll through social media or read a book. Maybe even have a lil spa day to myself.",
+          "status": "i"
         }
-      ],
-      "explanation": "the export keyword allows for the information to be transmitted between files"
+      ]
     },
     {
-      "questionText": "Which is an array method to generate a new array based on a condition?",
+      "questionText": "Get riled up sis, it’s your birthday! What are your plans for the night?",
       "options": [
         {
-          "text": "filter",
-          "correct": true
+          "text": "I’m throwing a HUGE birthday bash, inviting everyone on my contact list.",
+          "status": "e"
         },
         {
-          "text": "map"
+          "text": "I’m inviting a few friends and family over for cake and ice cream. Nothing too special.",
+          "status": "e"
         },
         {
-          "text": "async"
-        },
-        {
-          "text": "enum"
+          "text": "Ordering takeout and posting a happy birthday to me on my private social media.",
+          "status": "i"
         }
-      ],
-      "explanation": "filter is a method used to conditionally create a new array"
+      ]
     },
     {
-      "questionText": "How is a property accessible within a class?",
+      "questionText": "You got moneeeeyyyy! Which living space is to your taste? ",
       "options": [
         {
-          "text": "Using this.propertyName",
-          "correct": true
+          "text": "Million dollar house in the hills baby!",
+          "status": "e"
         },
         {
-          "text": "Accessors"
+          "text": "A cute apartment sound good to me.",
+          "status": "i"
         },
         {
-          "text": "Destructuring"
-        },
-        {
-          "text": "Arrow function"
+          "text": "A nice suburb house in a quiet neighborhood sounds amazing.",
+          "status": "i"
         }
-      ],
-      "explanation": "this.propertyName is the way to access a specific property within a class"
+      ]
+    },
+    {
+      "questionText": "When having conversations with others,",
+      "options": [
+        {
+          "text": "You share every last one of your opinions whether it will offend people or not.",
+          "status": "e"
+        },
+        {
+          "text": "You only provide your input when necessary.",
+          "status": "e"
+        },
+        {
+          "text": "You listen but never share what you’re thinking.",
+          "status": "i"
+        }
+      ]
     }
   ]
 }

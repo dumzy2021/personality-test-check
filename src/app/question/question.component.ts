@@ -13,7 +13,8 @@ export class QuestionComponent implements OnInit {
   questionList: any = [];
   currentQuestion: number = 0;
   counter: number = 60;
-  correctAnswers: number = 0;
+  anIntrovert: number = 0;
+  anExtrovert: number = 0;
   attemptedQuestions: number = 0;
   interval$!: Subscription;
   constructor(private questionService: QuestionService) {}
@@ -26,27 +27,27 @@ export class QuestionComponent implements OnInit {
     this.questionService.getQuestionJson().subscribe({
       next: (value) => {
         this.questionList = value.questions;
-        console.log(value.questions);
       },
     });
   }
   nextQuestion() {
-    this.currentQuestion++;
-    this.resetCounter();
     if (this.currentQuestion >= this.questionList.length - 1) {
       this.currentQuestion = this.questionList.length - 1;
       this.isTestCompleted = true;
     }
+    this.currentQuestion++;
+    this.resetCounter();
   }
   selectedAnswer(option: any) {
     this.attemptedQuestions++;
-    if (option.correct) {
-      this.correctAnswers++;
+    if (option.status === 'i') {
+      this.anIntrovert++;
       setTimeout(() => {
         this.nextQuestion();
       }, 1000);
     } else {
       setTimeout(() => {
+        this.anExtrovert++;
         this.nextQuestion();
       }, 1000);
     }
@@ -82,10 +83,19 @@ export class QuestionComponent implements OnInit {
   resetTest() {
     this.isTestCompleted = false;
     this.counter = 60;
-    this.correctAnswers = 0;
+    this.anIntrovert = 0;
+    this.anExtrovert = 0;
     this.currentQuestion = 0;
     this.attemptedQuestions = 0;
     this.resetCounter();
     this.getAllQuestions();
+  }
+  checkTestStatus(): string {
+    if (this.anExtrovert == this.anIntrovert) {
+      return 'Undecided';
+    } else if (this.anExtrovert > this.anIntrovert) {
+      return 'an Extrovert';
+    }
+    return 'an Introvert';
   }
 }

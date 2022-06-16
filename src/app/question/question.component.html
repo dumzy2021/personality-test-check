@@ -13,7 +13,7 @@
       </div>
       <div class="question">
         <div class="card">
-          <h5>{{ questionList[currentQuestion]?.questionText }}</h5>
+          <h6>{{ questionList[currentQuestion]?.questionText }}</h6>
         </div>
       </div>
       <div class="options">
@@ -35,16 +35,16 @@
       <div class="row">
         <div class="col-12 text-center">
           <img src="assets/congrats.jpg" alt="Congratulations" width="300" />
-          <h5 class="text-center my-3">
+          <h6 class="text-center my-3">
             Congratulations!!<br />
             you have completed the personality test.<br />
             Below is your result
-          </h5>
+          </h6>
           <p>
             Total Questions Attempted : {{ attemptedQuestions }} /
             {{ questionList.length }}
           </p>
-          <p>Total Questions Correct : {{ correctAnswers }}</p>
+          <p class="py-3">You are {{ checkTestStatus() }}</p>
           <div class="button-box text-center">
             <button class="btn btn-dark px-4" (click)="resetTest()">
               Reset Test
